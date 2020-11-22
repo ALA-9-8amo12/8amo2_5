@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">prjtranslator</string>
+    <string name="button">button</string>
+    <string name="home">HOME</string>
+    <string name="over">OVER</string>
+    <string name="todo">Todo</string>
 </resources>

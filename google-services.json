@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1093654462070",
+    "firebase_url": "https://project-translator-cac7a.firebaseio.com",
+    "project_id": "project-translator-cac7a",
+    "storage_bucket": "project-translator-cac7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093654462070:android:516bd42f8ac4de33b46957",
+        "android_client_info": {
+          "package_name": "com.example.prjtranslatorbij"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093654462070-j0pct27kelhtc2ea0eo7m1ias9899tt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLlF4cu3PegB1OUtXiZI8hJr0msEKQr7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093654462070-j0pct27kelhtc2ea0eo7m1ias9899tt1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

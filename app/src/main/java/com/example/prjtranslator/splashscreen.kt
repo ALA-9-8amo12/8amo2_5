@@ -13,7 +13,7 @@ class splashscreen : AppCompatActivity() {
         val background = object : Thread(){
             override fun run(){
                 try {
-                    Thread.sleep(500)
+                    Thread.sleep(3000)
                     val intent = Intent(baseContext, MainActivity::class.java)
                     startActivity(intent)
                 }catch(e:Exception){

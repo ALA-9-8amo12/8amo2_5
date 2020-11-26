@@ -1,4 +1,5 @@
 package com.example.prjtranslator
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -22,7 +23,7 @@ class OefenActivity : AppCompatActivity() {
         setContentView(R.layout.oefen)
         val homeButton = findViewById<Button>(R.id.home)
         homeButton.setOnClickListener {
-            val intent : Intent = Intent(this, MainActivity::class.java)
+            val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         loadData();
@@ -32,28 +33,19 @@ class OefenActivity : AppCompatActivity() {
         // define db
         val db = Firebase.firestore
         val categoryref = db.collection("catogories").document("dieren")
-        var image = HashMap<String, String>()
-        categoryref.get().addOnSuccessListener { document->
+        var url = "";
+        var image: HashMap<String, *> = HashMap<String, String>()
+        categoryref.get().addOnSuccessListener { document ->
             if (document != null) {
-                if (document.data != null) {
-                    val result= document.data;
-                    if (result != null) {
-                        image.put("egel", result.get("egel").toString())
-                    }
-                };
+//                println("Success ${document.data}")
+                val result = document.data;
+                image = result?.get("images") as HashMap<String, *>
+                url = image.get("egel").toString()
+                val iv: ImageView = findViewById(R.id.imageQuestion)
+                Glide.with(this@OefenActivity).load(url).into(iv)
             }
-        }.addOnFailureListener { exception->
+        }.addOnFailureListener { exception ->
             println("Error ${exception}")
         }
-
-        // text loading
-        val text : String = "Leuke text";
-        val tv : TextView = findViewById(R.id.textQuestion)
-        tv.setText(text);
-
-        // image loading
-        val url : String = image.get("egel") as String;
-        val iv : ImageView = findViewById(R.id.imageQuestion)
-        Glide.with(this@OefenActivity).load(url).into(iv)
     }
 }

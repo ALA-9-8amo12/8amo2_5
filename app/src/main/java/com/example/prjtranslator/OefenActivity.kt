@@ -1,7 +1,10 @@
 package com.example.prjtranslator
 
 import android.content.Intent
+import android.media.AudioManager
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -19,13 +22,21 @@ class OefenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.oefen)
+
         val homeButton = findViewById<Button>(R.id.home)
         homeButton.setOnClickListener {
             val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        //call function to get data from firebase
+
+        val mediaPlayer = MediaPlayer.create(this, R.raw.dieren01_egel)
+        val playBtn = findViewById<Button>(R.id.playBtn);
+        playBtn.setOnClickListener {
+            mediaPlayer?.start();
+        }
+
         loadData();
+
     }
 
     fun loadData() {

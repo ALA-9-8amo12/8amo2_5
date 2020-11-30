@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.54" />
 
     <View
-        android:id="@+id/view-oefen"
+        android:id="@+id/view_oefen"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/oval"
@@ -147,10 +147,10 @@
         android:layout_height="wrap_content"
         android:text="Oefen"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view-oefen"
-        app:layout_constraintEnd_toEndOf="@+id/view-oefen"
-        app:layout_constraintStart_toStartOf="@+id/view-oefen"
-        app:layout_constraintTop_toTopOf="@+id/view-oefen" />
+        app:layout_constraintBottom_toBottomOf="@+id/view_oefen"
+        app:layout_constraintEnd_toEndOf="@+id/view_oefen"
+        app:layout_constraintStart_toStartOf="@+id/view_oefen"
+        app:layout_constraintTop_toTopOf="@+id/view_oefen"/>
 
     <TextView
         android:id="@+id/textView6"

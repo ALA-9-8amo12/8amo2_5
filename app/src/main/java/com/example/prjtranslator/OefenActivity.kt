@@ -17,6 +17,10 @@ class OefenActivity : AppCompatActivity() {
     private val categoryRef = db.collection("catogories").document("dieren")
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // intent coming over from caterogyactivity
+        var categoryname : String = intent.getStringExtra("com.example.prjtranslator.info").toString();
+        println("catname " + categoryname)
+        //
         super.onCreate(savedInstanceState)
         setContentView(R.layout.oefen)
         val homeButton = findViewById<Button>(R.id.home)

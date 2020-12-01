@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlinx.android.synthetic.main.oefen.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,15 +15,21 @@ class MainActivity : AppCompatActivity() {
         val viewSpeel= findViewById<View>(R.id.view_speel)
         val viewScore= findViewById<View>(R.id.view_score)
         viewOefen.setOnClickListener {
-            val intent : Intent = Intent(this, OefenActivity::class.java  )
+            val intent : Intent = Intent(this, CategoryActivity::class.java  )
+            intent.putExtra("com.example.prjtranslator.info", "oefen");
+            intent.putExtra("com.example.prjtranslator.mode", "oefen");
             startActivity(intent)
         }
         viewSpeel.setOnClickListener {
-            val intent : Intent = Intent(this, SpeelActivity::class.java  )
+            val intent : Intent = Intent(this, CategoryActivity::class.java  )
+            intent.putExtra("com.example.prjtranslator.info", "speel");
+            intent.putExtra("com.example.prjtranslator.mode", "speel");
             startActivity(intent)
         }
         viewScore.setOnClickListener {
-            val intent : Intent = Intent(this, ScoreActivity::class.java  )
+            val intent : Intent = Intent(this, CategoryActivity::class.java  )
+            intent.putExtra("com.example.prjtranslator.info", "score");
+            intent.putExtra("com.example.prjtranslator.mode", "score");
             startActivity(intent)
         }
 

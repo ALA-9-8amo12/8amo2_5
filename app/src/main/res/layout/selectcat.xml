@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="155dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/vlag"
+        tools:srcCompat="@drawable/vlag" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="button"
+        android:text="HOME"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <View
+        android:id="@+id/eten"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/groente"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/kleding"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="368dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/weer"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="496dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fruit"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/insecten"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="368dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/kleuren"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="496dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:text="OVER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <View
+        android:id="@+id/dieren"
+        android:layout_width="150dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dieren"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dieren"
+        app:layout_constraintEnd_toEndOf="@+id/dieren"
+        app:layout_constraintStart_toStartOf="@+id/dieren"
+        app:layout_constraintTop_toTopOf="@+id/dieren"
+        app:layout_constraintVertical_bias="0.489" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eten"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/eten"
+        app:layout_constraintEnd_toEndOf="@+id/eten"
+        app:layout_constraintStart_toStartOf="@+id/eten"
+        app:layout_constraintTop_toTopOf="@+id/eten" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="43dp"
+        android:layout_height="28dp"
+        android:text="Fruit"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fruit"
+        app:layout_constraintEnd_toEndOf="@+id/fruit"
+        app:layout_constraintStart_toStartOf="@+id/fruit"
+        app:layout_constraintTop_toTopOf="@+id/fruit" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Groente"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/groente"
+        app:layout_constraintEnd_toEndOf="@+id/groente"
+        app:layout_constraintStart_toStartOf="@+id/groente"
+        app:layout_constraintTop_toTopOf="@+id/groente" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insecten"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/insecten"
+        app:layout_constraintEnd_toEndOf="@+id/insecten"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="@+id/insecten"
+        app:layout_constraintTop_toTopOf="@+id/insecten" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kleding"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/kleding"
+        app:layout_constraintEnd_toEndOf="@+id/kleding"
+        app:layout_constraintStart_toStartOf="@+id/kleding"
+        app:layout_constraintTop_toTopOf="@+id/kleding" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kleding"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/kleuren"
+        app:layout_constraintEnd_toEndOf="@+id/kleuren"
+        app:layout_constraintStart_toStartOf="@+id/kleuren"
+        app:layout_constraintTop_toTopOf="@+id/kleuren" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weer"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/weer"
+        app:layout_constraintEnd_toEndOf="@+id/weer"
+        app:layout_constraintStart_toStartOf="@+id/weer"
+        app:layout_constraintTop_toTopOf="@+id/weer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

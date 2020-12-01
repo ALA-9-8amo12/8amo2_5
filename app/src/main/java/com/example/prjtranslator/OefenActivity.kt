@@ -13,7 +13,6 @@ import com.google.firebase.ktx.Firebase
 
 @GlideModule
 class OefenActivity : AppCompatActivity() {
-    // PS, als sommige dingen niet werken komt het omdat daar nog niks inzit. de query neemt nu al user keuze in begrip
     private val db = Firebase.firestore
     private val categoryRef = db.collection("catogories").document("dieren")
 

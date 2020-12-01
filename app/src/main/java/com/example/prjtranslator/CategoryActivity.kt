@@ -31,137 +31,39 @@ class CategoryActivity : AppCompatActivity() {
         val viewWeer = findViewById<View>(R.id.weer)
 
         val categoryname : String = intent.getStringExtra("com.example.prjtranslator.info").toString();
+        val AllViews : ArrayList<View> = arrayListOf<View>(viewDieren, viewEten, viewFruit, viewGroente, viewInsecten, viewKleding, viewKleuren, viewWeer)
 
         fun oefenOnClickListeners() {
-            viewDieren.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "dieren");
-                startActivity(intent)
-            }
-            viewEten.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "eten");
-                startActivity(intent)
-            }
-            viewFruit.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "fruit");
-                startActivity(intent)
-            }
-            viewGroente.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "groente");
-                startActivity(intent)
-            }
-            viewInsecten.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "insecten");
-                startActivity(intent)
-            }
-            viewKleding.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "kleding");
-                startActivity(intent)
-            }
-            viewKleuren.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "kleuren");
-                startActivity(intent)
-            }
-            viewWeer.setOnClickListener {
-                val intent : Intent = Intent(this, OefenActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "weer");
-                startActivity(intent)
-            }
-
+           for( view in AllViews){
+               val viewIdName: String = resources.getResourceEntryName(view.id)
+               view.setOnClickListener {
+                   val intent: Intent = Intent(this, OefenActivity::class.java)
+                   intent.putExtra("com.example.prjtranslator.info", viewIdName)
+                   startActivity(intent)
+               }
+           }
         }
 
         fun speelOnClickListeners() {
-            viewDieren.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "dieren");
-                startActivity(intent)
+            for( view in AllViews){
+                val viewIdName: String = resources.getResourceEntryName(view.id)
+                view.setOnClickListener {
+                    val intent: Intent = Intent(this, SpeelActivity::class.java)
+                    intent.putExtra("com.example.prjtranslator.info", viewIdName)
+                    startActivity(intent)
+                }
             }
-            viewEten.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "eten");
-                startActivity(intent)
-            }
-            viewFruit.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "fruit");
-                startActivity(intent)
-            }
-            viewGroente.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "groente");
-                startActivity(intent)
-            }
-            viewInsecten.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "insecten");
-                startActivity(intent)
-            }
-            viewKleding.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "kleding");
-                startActivity(intent)
-            }
-            viewKleuren.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "kleuren");
-                startActivity(intent)
-            }
-            viewWeer.setOnClickListener {
-                val intent : Intent = Intent(this, SpeelActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "weer");
-                startActivity(intent)
-            }
-
         }
 
         fun scoreOnClickListeners() {
-            viewDieren.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "dieren");
-                startActivity(intent)
+            for( view in AllViews){
+                val viewIdName: String = resources.getResourceEntryName(view.id)
+                view.setOnClickListener {
+                    val intent: Intent = Intent(this, ScoreActivity::class.java)
+                    intent.putExtra("com.example.prjtranslator.info", viewIdName)
+                    startActivity(intent)
+                }
             }
-            viewEten.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "eten");
-                startActivity(intent)
-            }
-            viewFruit.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "fruit");
-                startActivity(intent)
-            }
-            viewGroente.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "groente");
-                startActivity(intent)
-            }
-            viewInsecten.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "insecten");
-                startActivity(intent)
-            }
-            viewKleding.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "kleding");
-                startActivity(intent)
-            }
-            viewKleuren.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "kleuren");
-                startActivity(intent)
-            }
-            viewWeer.setOnClickListener {
-                val intent : Intent = Intent(this, ScoreActivity::class.java  )
-                intent.putExtra("com.example.prjtranslator.info", "weer");
-                startActivity(intent)
-            }
-
         }
 
         // decide what activity
@@ -174,5 +76,4 @@ class CategoryActivity : AppCompatActivity() {
             }
         }
     }
-
 }

@@ -13,5 +13,7 @@ class ScoreActivity : AppCompatActivity() {
             val intent : Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        var categoryname : String = intent.getStringExtra("com.example.prjtranslator.info").toString();
+        println("catname " + categoryname)
     }
 }

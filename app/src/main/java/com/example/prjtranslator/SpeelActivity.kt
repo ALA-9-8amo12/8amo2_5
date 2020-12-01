@@ -13,5 +13,8 @@ class SpeelActivity : AppCompatActivity() {
             val intent : Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        // intent from category choosing screen
+        var categoryname : String = intent.getStringExtra("com.example.prjtranslator.info").toString();
+        println("catname " + categoryname)
     }
 }

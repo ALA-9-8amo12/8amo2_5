@@ -56,67 +56,31 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageQuestion"
-        android:layout_width="345dp"
-        android:layout_height="257dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.396"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="TODO" />
-
-    <TextView
-        android:id="@+id/textQuestion"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="92dp"
-        android:gravity="center_horizontal"
-        android:text="Het woord"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/scores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="84dp"
-        android:text="Volgende"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
     <Button
         android:id="@+id/playBtn"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="540dp"
         android:text="Speel Audio"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.55" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="344dp"
-        android:layout_height="25dp"
-        android:text="it's a zeebra! right?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/vraagNL"
+        android:layout_width="128dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Welk dier hoor je?"
+        app:layout_constraintEnd_toStartOf="@+id/playBtn"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
-        app:layout_constraintVertical_bias="0.149"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

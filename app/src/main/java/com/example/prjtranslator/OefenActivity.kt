@@ -7,6 +7,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -14,11 +15,13 @@ import com.google.firebase.ktx.Firebase
 @GlideModule
 class OefenActivity : AppCompatActivity() {
     private val db = Firebase.firestore
-    private val categoryRef = db.collection("catogories").document("dieren")
+    private lateinit var categoryref : DocumentReference;
+    private lateinit var categoryname : String;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // intent coming over from caterogyactivity
-        var categoryname : String = intent.getStringExtra("com.example.prjtranslator.info").toString();
+        categoryname = intent.getStringExtra("com.example.prjtranslator.info").toString();
+        categoryref = db.collection("catogories").document(categoryname)
         println("catname " + categoryname)
         //
         super.onCreate(savedInstanceState)
@@ -33,7 +36,7 @@ class OefenActivity : AppCompatActivity() {
     }
 
     fun loadData() {
-        categoryRef.get().addOnSuccessListener { document ->
+        categoryref.get().addOnSuccessListener { document ->
             if (document != null) {
                 val image = document.data?.get("images") as HashMap<String, *>
                 // invoke function that updates the ui with the image hashmap

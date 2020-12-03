@@ -1,7 +1,10 @@
 package com.example.prjtranslator
 
 import android.content.Intent
+import android.media.AudioManager
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -23,13 +26,25 @@ class OefenActivity : AppCompatActivity() {
         //
         super.onCreate(savedInstanceState)
         setContentView(R.layout.oefen)
+
         val homeButton = findViewById<Button>(R.id.home)
         homeButton.setOnClickListener {
             val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        //call function to get data from firebase
+
+        val playBtn = findViewById<Button>(R.id.playBtn);
+        playBtn.setOnClickListener {
+
+            val mediaPlayer: MediaPlayer? = MediaPlayer().apply {
+                setDataSource("https://firebasestorage.googleapis.com/v0/b/project-translator-cac7a.appspot.com/o/Dieren%2Fdieren01_geit.mp3?alt=media&token=3b50f4f2-f82a-4cfa-a1a4-82210607e863")
+                prepare()
+                start()
+            }
+        }
+
         loadData();
+
     }
 
     fun loadData() {

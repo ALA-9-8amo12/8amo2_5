@@ -29,10 +29,14 @@ class OefenActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val mediaPlayer = MediaPlayer.create(this, R.raw.dieren01_egel)
         val playBtn = findViewById<Button>(R.id.playBtn);
         playBtn.setOnClickListener {
-            mediaPlayer?.start();
+
+            val mediaPlayer: MediaPlayer? = MediaPlayer().apply {
+                setDataSource("https://firebasestorage.googleapis.com/v0/b/project-translator-cac7a.appspot.com/o/Dieren%2Fdieren01_geit.mp3?alt=media&token=3b50f4f2-f82a-4cfa-a1a4-82210607e863")
+                prepare()
+                start()
+            }
         }
 
         loadData();

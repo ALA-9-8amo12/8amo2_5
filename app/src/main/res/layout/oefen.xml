@@ -56,70 +56,17 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageQuestion"
-        android:layout_width="116dp"
-        android:layout_height="101dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageQuestion2"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playBtn"
-        app:layout_constraintVertical_bias="0.616"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageQuestion4"
-        android:layout_width="116dp"
-        android:layout_height="101dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageQuestion2"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playBtn"
-        app:layout_constraintVertical_bias="0.332"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageQuestion3"
-        android:layout_width="116dp"
-        android:layout_height="101dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageQuestion2"
-        app:layout_constraintHorizontal_bias="0.543"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playBtn"
-        app:layout_constraintVertical_bias="0.046"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageQuestion2"
-        android:layout_width="116dp"
-        android:layout_height="101dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
-        app:layout_constraintStart_toStartOf="@+id/playBtn"
-        app:layout_constraintTop_toBottomOf="@+id/playBtn"
-        app:layout_constraintVertical_bias="0.044"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/playBtn"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginLeft="144dp"
-        android:layout_marginBottom="552dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         android:text="Speel Audio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.607" />
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
+        app:layout_constraintVertical_bias="0.238" />
 
     <View
         android:id="@+id/view_oefen"
@@ -129,6 +76,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageQuestion"
+        android:layout_width="330dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

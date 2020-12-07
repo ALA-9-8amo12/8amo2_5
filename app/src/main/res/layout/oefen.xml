@@ -56,53 +56,29 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageQuestion"
-        android:layout_width="345dp"
-        android:layout_height="257dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.396"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="TODO" />
-
-    <TextView
-        android:id="@+id/textQuestion"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="92dp"
-        android:gravity="center_horizontal"
-        android:text="Het woord"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/scores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
-
     <Button
-        android:id="@+id/button3"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:layout_marginBottom="112dp"
-        android:text="Volgende"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="112dp"
+        android:id="@+id/playBtn"
+        android:layout_width="330dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:text="Speel Audio"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <Button
+        android:id="@+id/reloadPageBtn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:text="Volgende"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
+        app:layout_constraintVertical_bias="0.842" />
 
     <View
         android:id="@+id/view_oefen"
@@ -110,18 +86,41 @@
         android:layout_height="24dp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageQuestion"
         android:layout_width="330dp"
-        android:layout_height="24dp"
-        android:text="it's a zeebra! right?"
-        app:layout_constraintBottom_toBottomOf="@+id/view_oefen"
-        app:layout_constraintTop_toTopOf="@+id/view_oefen"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="40dp" />
+        android:layout_height="175dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/imgText"
+        android:layout_width="151dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center_vertical"
+        android:textSize="50px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
+
+    <TextView
+        android:id="@+id/vertalingText"
+        android:layout_width="151dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center_vertical"
+        android:textSize="50px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

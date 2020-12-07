@@ -6,6 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/reloadPageBtn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Volgende"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
+        app:layout_constraintVertical_bias="0.834" />
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="330dp"
+        android:layout_height="41dp"
+        android:text="Speel Audio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
+        app:layout_constraintVertical_bias="0.171" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="Koe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="Koe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="232dp"
+        android:text="Koe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="176dp"
+        android:text="Koe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="155dp"
@@ -57,12 +125,14 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:layout_width="300dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="44dp"
+        android:id="@+id/imgText"
+        android:layout_width="304dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="224dp"
         android:gravity="center_horizontal"
         android:text="Welk dier is dit?"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/scores"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -73,47 +143,23 @@
         android:id="@+id/imageQuestion"
         android:layout_width="338dp"
         android:layout_height="200dp"
-        android:foreground="@android:drawable/editbox_dropdown_light_frame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.251" />
+        app:layout_constraintVertical_bias="0.037" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
         android:text="Koe"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginBottom="100dp"
-        android:text="Koe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginBottom="100dp"
-        android:text="Koe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
 
     <Button
         android:id="@+id/button6"
@@ -121,11 +167,10 @@
         android:layout_height="40dp"
         android:layout_marginStart="76dp"
         android:layout_marginLeft="76dp"
+        android:layout_marginTop="120dp"
         android:text="Koe"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageQuestion"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintTop_toBottomOf="@+id/imageQuestion" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

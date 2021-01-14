@@ -23,15 +23,21 @@ class SpeelActivity : AppCompatActivity() {
     private var questioncount: Int = 1;
     private var incorrectcount: Int = 0;
     private val data = arrayListOf<SpeelActivity.Questions>();
+    private lateinit var categoryName: String
+
+    private fun setCato(){
+        categoryName = intent.getStringExtra("com.example.prjtranslator.info").toString().capitalize();
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        categoryname =
-            intent.getStringExtra("com.example.prjtranslator.info").toString().capitalize();
-        myRef =
-            database.getReference("1eLp2DK8iDagiTPtyGeDDLv_Qk4V7K5bL4anCPoxQmYY/" + categoryname);
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.speel)
+
+        setCato()
+        myRef =
+            database.getReference("1eLp2DK8iDagiTPtyGeDDLv_Qk4V7K5bL4anCPoxQmYY/" + categoryName);
 
         val homeButton = findViewById<Button>(R.id.home)
         homeButton.setOnClickListener {
@@ -117,9 +123,15 @@ class SpeelActivity : AppCompatActivity() {
         val randomNumber = Random().nextInt(data.count()) // random item from db
         val randomType = Random().nextInt(2) // text, or image
         answer = data.get(randomNumber).vertaling;
-        if (questioncount == 10) {
+        if (questioncount == 9) {
             val intent: Intent = Intent(this, ScoreActivity::class.java)
-            startActivity(intent)
+            if(this::categoryName.isInitialized ) {
+                intent.putExtra("categoryName", categoryName)
+                intent.putExtra("wrongs", incorrectcount)
+            }else {
+                intent.putExtra("categoryName", "it failed")
+            }
+                startActivity(intent)
         }
         // all buttons
         val answer1: Button = findViewById(R.id.answer1)
@@ -142,9 +154,6 @@ class SpeelActivity : AppCompatActivity() {
         }
         val randomButtonNumb = Random().nextInt(6)
         AllAnswers[randomButtonNumb].setText(answer);
-
-
-
 
 
         if (randomType == 0) {

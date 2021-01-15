@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val viewOefen = findViewById<View>(R.id.view_oefen)
         val viewSpeel= findViewById<View>(R.id.view_speel)
-        val viewScore= findViewById<View>(R.id.view_score)
+
         viewOefen.setOnClickListener {
             val intent : Intent = Intent(this, CategoryActivity::class.java  )
             intent.putExtra("com.example.prjtranslator.info", "oefen");
@@ -26,12 +26,5 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("com.example.prjtranslator.mode", "speel");
             startActivity(intent)
         }
-        viewScore.setOnClickListener {
-            val intent : Intent = Intent(this, CategoryActivity::class.java  )
-            intent.putExtra("com.example.prjtranslator.info", "score");
-            intent.putExtra("com.example.prjtranslator.mode", "score");
-            startActivity(intent)
-        }
-
     }
 }

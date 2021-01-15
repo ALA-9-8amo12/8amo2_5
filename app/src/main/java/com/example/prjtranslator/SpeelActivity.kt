@@ -24,12 +24,11 @@ class SpeelActivity : AppCompatActivity() {
     private var incorrectcount: Int = 0;
     private val data = arrayListOf<SpeelActivity.Questions>();
     private lateinit var categoryName: String
+    private var correctCount = 0;
 
     private fun setCato(){
         categoryName = intent.getStringExtra("com.example.prjtranslator.info").toString().capitalize();
     }
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,8 +85,10 @@ class SpeelActivity : AppCompatActivity() {
 
     private fun checkAnswer(button: Button, value: String) {
         if (value == answer) {
+            correctCount++
             addData();
             incorrectcount = 0;
+
         } else {
             if(incorrectcount > 2) {
                 addData();
@@ -127,11 +128,11 @@ class SpeelActivity : AppCompatActivity() {
             val intent: Intent = Intent(this, ScoreActivity::class.java)
             if(this::categoryName.isInitialized ) {
                 intent.putExtra("categoryName", categoryName)
-                intent.putExtra("wrongs", incorrectcount)
+                intent.putExtra("rights", correctCount)
             }else {
                 intent.putExtra("categoryName", "it failed")
             }
-                startActivity(intent)
+            startActivity(intent)
         }
         // all buttons
         val answer1: Button = findViewById(R.id.answer1)

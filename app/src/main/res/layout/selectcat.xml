@@ -169,7 +169,7 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="43dp"
+        android:layout_width="48dp"
         android:layout_height="28dp"
         android:text="Fruit"
         android:textSize="24sp"

@@ -56,18 +56,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <View
-        android:id="@+id/view_speel"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/oval"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
-
-    <View
         android:id="@+id/view_oefen"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -77,10 +65,21 @@
         app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintVertical_bias="0.667" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oefen"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_oefen"
+        app:layout_constraintEnd_toEndOf="@+id/view_oefen"
+        app:layout_constraintStart_toStartOf="@+id/view_oefen"
+        app:layout_constraintTop_toTopOf="@+id/view_oefen" />
 
     <View
-        android:id="@+id/view_score"
+        android:id="@+id/view_speel"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/oval"
@@ -88,8 +87,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_speel"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speel"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_speel"
+        app:layout_constraintEnd_toEndOf="@+id/view_speel"
+        app:layout_constraintStart_toStartOf="@+id/view_speel"
+        app:layout_constraintTop_toTopOf="@+id/view_speel" />
 
     <View
         android:id="@+id/view3"
@@ -140,38 +150,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.328" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Oefen"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view_oefen"
-        app:layout_constraintEnd_toEndOf="@+id/view_oefen"
-        app:layout_constraintStart_toStartOf="@+id/view_oefen"
-        app:layout_constraintTop_toTopOf="@+id/view_oefen"/>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Score"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view_score"
-        app:layout_constraintEnd_toEndOf="@+id/view_score"
-        app:layout_constraintStart_toStartOf="@+id/view_score"
-        app:layout_constraintTop_toTopOf="@+id/view_score" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Speel"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view_speel"
-        app:layout_constraintEnd_toEndOf="@+id/view_speel"
-        app:layout_constraintStart_toStartOf="@+id/view_speel"
-        app:layout_constraintTop_toTopOf="@+id/view_speel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

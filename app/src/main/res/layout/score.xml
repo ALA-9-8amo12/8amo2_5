@@ -10,13 +10,13 @@
         android:id="@+id/imageView"
         android:layout_width="155dp"
         android:layout_height="106dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/vlag"
-        tools:srcCompat="@drawable/vlag"
-        android:contentDescription="@string/todo" />
+        tools:srcCompat="@drawable/vlag" />
 
     <Button
         android:id="@+id/home"
@@ -56,37 +56,32 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <View
-        android:id="@+id/scores"
-        android:layout_width="338dp"
-        android:layout_height="500dp"
-        android:foreground="@android:drawable/editbox_dropdown_light_frame"
+    <TextView
+        android:id="@+id/ScoreText"
+        android:layout_width="303dp"
+        android:layout_height="172dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.5" tools:targetApi="m" />
-
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="338dp"
-        android:layout_height="500dp"
-        app:layout_constraintBottom_toBottomOf="@+id/scores"
-        app:layout_constraintEnd_toEndOf="@+id/scores"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/scores"
-        app:layout_constraintTop_toTopOf="@+id/scores"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
 
     <TextView
-        app:layout_constraintBottom_toBottomOf="@+id/scores"
-        app:layout_constraintEnd_toEndOf="@+id/scores"
-        app:layout_constraintStart_toStartOf="@+id/scores"
-        app:layout_constraintTop_toTopOf="@+id/scores"
-        android:text="Score 1\nScore 2\nScore 3"
-        android:layout_width="338dp"
-        android:layout_height="500dp" />
+        android:id="@+id/header"
+        android:layout_width="134dp"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:text="Categorie"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ScoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

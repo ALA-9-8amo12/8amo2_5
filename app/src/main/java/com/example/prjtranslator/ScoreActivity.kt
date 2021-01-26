@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.synthetic.main.score.*
 import java.io.BufferedReader
 import java.io.File
 
@@ -56,8 +57,10 @@ class ScoreActivity : AppCompatActivity() {
         if (getScoresJson(file) != null){
             val h: Int = getScoresJson(File(fileName)).HighScore
             writeData(file, h , scoreCount.toInt() )
+            val headerTextView: TextView = findViewById(R.id.header)
+            headerTextView.text = "${categoryName}"
             val textView: TextView = findViewById(R.id.ScoreText)
-            textView.text = "${categoryName}\n Your score ${getScoresJson(file).CurrentScore} out of 10 \n The Highscore ${getScoresJson(file).HighScore} out of 10"
+            textView.text = "Jouw score ${getScoresJson(file).CurrentScore} out of 10 \n De Highscore ${getScoresJson(file).HighScore} van de 10"
         }
     }
 
